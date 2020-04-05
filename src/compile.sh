@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 export FORTRAN=gfortran
-export EXECUTABLE="model.x"
+export EXECUTABLE="../bin/model.x"
 
 # Set netCDF paths
 NETCDF_LIB=`nc-config --flibs`

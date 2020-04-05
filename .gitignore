@@ -1,3 +1,7 @@
+# Package specific
+*.x
+*.o
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

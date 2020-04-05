@@ -15,6 +15,6 @@ class Model:
         self.name = "dummy_model"
 
     def compile(self):
-        cmpl_scr = Path.cwd().parent / "src" / "compile.sh"
+        cmpl_scr = Path.cwd().parent.parent / "src" / "compile.sh"
         print(cmpl_scr)
         sb.call(cmpl_scr, shell=True)

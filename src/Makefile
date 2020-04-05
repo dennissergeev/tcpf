@@ -1,4 +1,3 @@
-EXECUTABLE = model.x
 OBJ = atmos.o base.o
 INCS = $(NETCDF_INC)
 LIBS = $(NETCDF_LIB)
