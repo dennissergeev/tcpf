@@ -18,3 +18,8 @@ class Model:
         cmpl_scr = Path.cwd().parent.parent / "src" / "compile.sh"
         print(cmpl_scr)
         sb.call(cmpl_scr, shell=True)
+
+    def run(self):
+        run_scr = Path.cwd().parent.parent / "bin" / "model.x"
+        print(run_scr)
+        sb.call(run_scr, shell=True)
