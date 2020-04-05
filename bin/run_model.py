@@ -3,5 +3,5 @@
 from tcpf import Model
 
 
-m = Model()
+m = Model(None)
 m.run()
