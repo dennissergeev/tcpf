@@ -3,14 +3,22 @@
 from pathlib import Path
 from setuptools import setup, find_packages
 
+# from setuptools.command.build_py import build_py
 
-executable = Path.cwd().parent / "bin" / "model.x"
+
+script_dir = Path.cwd() / "bin"
+scripts = [str(i) for i in [script_dir / "run_model.py"]]
+print(scripts)
 
 
 setup(
     name="tcpf",
     version="0.1",
-    scripts=[executable],
+    package_dir={"tcpf": "python/tcpf"},
+    include_package_data=True,
+    packages=find_packages(),
+    zip_safe=False,
+    scripts=scripts,
     install_requires=["sh", "jinja2", "f90nml", "numpy", "pandas", "xarray"],
     # metadata to display on PyPI
     author="Denis Sergeev",

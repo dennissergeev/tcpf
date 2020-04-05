@@ -4,4 +4,4 @@ from tcpf import Model
 
 
 m = Model()
-m.run()
+m.compile()
