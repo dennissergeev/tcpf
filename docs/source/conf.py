@@ -20,7 +20,7 @@
 import os
 from glob import glob
 
-import tcpf
+# import tcpf
 
 
 # -- Project information -----------------------------------------------------
@@ -30,7 +30,7 @@ copyright = "2020, the tcpf developers"  # noqa
 author = "The tcpf developers"
 
 # The short X.Y version
-version = tcpf.__version__
+version = "0.1" # tcpf.__version__
 # The full version, including alpha/beta/rc tags
 release = version
 
