@@ -12,8 +12,8 @@ jobs:
 
     steps:
     - name: Build docs
-    - uses: actions/checkout@v2
-    - uses: ammaraskar/sphinx-action@master
+      uses: actions/checkout@v2
+      uses: ammaraskar/sphinx-action@master
       with:
         docs-folder: "docs/"
 #    - name: Commit documentation changes
