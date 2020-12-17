@@ -19,6 +19,7 @@ jobs:
         pre-build-command: |
           python -m pip install --upgrade pip
           python -m pip install nbsphinx sphinx_rtd_theme
+          python -m pip install .
           ls -lah
         docs-folder: "docs/"
 #    - name: Commit documentation changes
