@@ -17,7 +17,7 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-# import tcpf
+import tcpf
 
 
 # -- Project information -----------------------------------------------------
@@ -27,7 +27,7 @@ copyright = "2020, the tcpf developers"  # noqa
 author = "The tcpf developers"
 
 # The short X.Y version
-version = "0.1"  # tcpf.__version__
+version = tcpf.__version__
 # The full version, including alpha/beta/rc tags
 release = version
 
