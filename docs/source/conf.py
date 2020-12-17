@@ -17,9 +17,6 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-import os
-from glob import glob
-
 # import tcpf
 
 
@@ -30,7 +27,7 @@ copyright = "2020, the tcpf developers"  # noqa
 author = "The tcpf developers"
 
 # The short X.Y version
-version = "0.1" # tcpf.__version__
+version = "0.1"  # tcpf.__version__
 # The full version, including alpha/beta/rc tags
 release = version
 
@@ -218,24 +215,3 @@ autodoc_default_options = {
     "special-members": "__init__",
     "show-inheritance": None,
 }
-
-
-# nbsphinx linking
-examples_src_dir = "../../examples"
-examples_doc_dir = "examples"
-examples_header = "_index_header_rst"
-
-for nb_f in glob(os.path.join(examples_doc_dir, "*.ipynb")):
-    if os.path.islink(nb_f):
-        os.unlink(nb_f)
-
-with open(os.path.join(examples_doc_dir, "index.rst"), "w") as fw:
-    with open(os.path.join(examples_doc_dir, examples_header), "r") as fr:
-        fw.write(fr.read())
-    fw.write("\n")
-    for nb_f in sorted(glob(os.path.join(examples_src_dir, "*.ipynb"))):
-        _bn = os.path.basename(nb_f)
-        if _bn.startswith("Untitled"):
-            continue
-        os.symlink(os.path.abspath(nb_f), os.path.join(examples_doc_dir, _bn))
-        fw.write("   {}\n".format(_bn))
